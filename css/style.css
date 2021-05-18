@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+ margin: 0%;
+ padding: 0%;
+ box-sizing: border-box;   
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+:root {
+--primary-color:black;
+--secundary-color:white;
+--tercer-color: red;
+}
+
+header{ /*etiquetas semanticas no llevan punto*/
+    height: 132px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.caja-pizza{
+    display: flex;
+    gap: 13px;
+    align-items: center;
+   
+
+}
+.vector-pizza{
+    background-image: url("../img/VectorPizza.png");
+    width: 88px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 40px;
+}
+
+.front-titulo{
+   align-items: center;
+   display: flex;
+}
+.verde{
+    color:green;
+}
+
+.blanco{
+    color:var(--secundary-color)
+}
+
+h2{
+    color:var(--tercer-color)
+}
+nav{
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    gap: 13px;
+    margin-right: 20px;
+    color: var(--secundary-color);
+    list-style: none; /*quitar puntos de la lista o viñetas*/
+    margin-right: 40px
+  }
+
+nav ul li:hover{
+color:red;
+text-decoration: underline;
+}
+
+main{
+display: flex;
+justify-content: space-around;
+margin-top: 40px;
+
+}
+
+.señor-pizza{
+      width: 40%;
+      height: 450px;
+      background-image: url("../img/señorenMoto2021-05-17\ at\ 4.11.44\ PM.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;    
+}
+
+.señor-pizza:hover{
+    transform: scale(1.1); /*efecto zoom (de 1 hasta 2)*/
+}
+
+
+.señor-pizza>h2{
+margin-top: 30px;
+align-items: center;
+margin-left: 40px;
+font-size: 30px;
+}
+
+.blanco2 {
+    color: var(--secundary-color);
+}
+
+.ingredientes{
+    width: 40%;
+    height: 450px;
+}
+
+.podio-pizza{
+    top: 30px;
+    position: relative;
+    font-size: 25px;
+}
+.podio-pizza>h2{
+    text-align: center;
+}
+
+.pizza-top{
+    height: 300px;
+    top: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.top-5{
+    align-items: center;
+    display: flex;
+    margin-left: 30px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.vegetales-img{
+    height: 192px;
+    width: 150px;
+    background-image: url("../img/vegetalesImage\ 2021-05-17\ at\ 4.11.47\ PM.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    margin-top: 40px;
+
+}
+
+footer{
+background-color: var(--primary-color);
+display: flex;
+gap: 13px;
+justify-content: space-between;
+height: 160px;
+margin-top: 40px;
+}
+
+.vector-pizza-footer{
+    background-image: url("../img/VectorPizza.png");
+    width: 100px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 40px;
+}
+
+.menu-footer{
+color: var(--secundary-color);
+margin-left: 40px;
+line-height: 30px;
+display: flex; 
+align-items: center;
+
+}
+.menu-footer ul { /*las viñetas siempre las trae el ul*/
+    list-style: none;
+}
+
+.caja-pizza-footer{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.menu-footer ul li:hover{ /*cuando uno pasa sobre las letras se pone en color (determinado) y subrayado)*/
+    color:red;
+    text-decoration: underline;
+    }
+
+    /* diseño adaptativo tablet*/
+@media screen and (max-width: 720px) {  /*en responsive hay que dejar % en rem (% dividio en 16)*/
+    main{
+        flex-direction: column;
+    }
+    .señor-pizza{
+        width: 98%;
+    }
+    .ingredientes {
+        width: 98%;
+        align-items: center;
+        margin-top: 40px;
+    }
+}
+
+nav ul li{
+    display: none;
+  }
+     nav ul::before{
+       color: var(--white);
+       font-size: 1.8rem;
+       font-family: "Font Awesome 5 Free";
+       font-weight: 900;
+       content: "\f0c9";
+   }
+
+   /* diseño adaptativo movil*/
+@media screen and (max-width: 420px) {
+
+.señor-pizza>h2{
+        font-size: 1.25rem;
+}
+.podio-pizza>h2 {
+    font-size: 1.25rem;
+}
+.front-titulo-footer>h2 {
+    font-size: 1rem;
+}
+}
+
